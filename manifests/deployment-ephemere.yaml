@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-ephemere
+  namespace: odf-demo
+spec:
+  selector:
+    matchLabels:
+      app: app-ephemere
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: app-ephemere
+    spec:
+      containers:
+        - name: app-ephemere
+          image: registry.access.redhat.com/ubi8/ubi
+          command:
+          - tail
+          - -f 
+          - /dev/null

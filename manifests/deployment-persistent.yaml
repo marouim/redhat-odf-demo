@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-persistent
+  namespace: odf-demo
+spec:
+  selector:
+    matchLabels:
+      app: app-persistent
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: app-persistent
+    spec:
+      volumes:
+        - name: app-persistent
+          persistentVolumeClaim:
+            claimName: app-persistent
+      containers:
+        - name: app-persistent
+          image: registry.access.redhat.com/ubi8/ubi
+          command:
+          - tail
+          - -f 
+          - /dev/null
+          volumeMounts:
+            - name: app-persistent
+              mountPath: /volume
