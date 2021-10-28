@@ -1,5 +1,13 @@
 # Red Hat Openshift Data Foundation
 
+## File system
+
+Créer un fichier vide pour simuler l'utilisation de l'espace
+
+```
+dd if=/dev/zero of=1g.img bs=1 count=0 seek=9G
+```
+
 ## Object Storage 
 
 ### Application s3app
