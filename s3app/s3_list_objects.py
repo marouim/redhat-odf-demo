@@ -16,9 +16,9 @@ print("\n<> Liste des objets stockés dans le bucket " + bucket + "\n")
 for r in response["Contents"]:
     print(r)
 
-obj = s3.get_object(Bucket=bucket, Key='myfiles20')
+# obj = s3.get_object(Bucket=bucket, Key='myfiles20')
 
-print("\n<> Metadata associé à myfiles20\n")
-print(obj["Metadata"])
-print("\n<> Contenu de myfiles20\n")
-print(obj["Body"].read().decode('utf-8'))
+# print("\n<> Metadata associé à myfiles20\n")
+# print(obj["Metadata"])
+# print("\n<> Contenu de myfiles20\n")
+# print(obj["Body"].read().decode('utf-8'))
