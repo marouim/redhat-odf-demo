@@ -1,7 +1,7 @@
 import os
 
 # Default values
-endpoint_url = "https://s3-openshift-storage.apps.rhcasalab.sandbox1385.opentlc.com"
+endpoint_url = "s3-openshift-storage.apps.rhcasalab.sandbox1385.opentlc.com"
 access_key = "oTeCpVd5EwL2O9gcreMX"
 secret_key = "bVyMLlSiXldVwuwefK+4OYTDQhwD9xfVj5MgpWBJ"
 bucket = "test2-5f5cd560-9506-4113-914b-2465f622f4ed"
